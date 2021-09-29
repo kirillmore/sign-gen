@@ -1,10 +1,4 @@
 <?
-header('Access-Control-Allow-Origin: *');
-
-header('Access-Control-Allow-Methods: GET, POST');
-
-header("Access-Control-Allow-Headers: X-Requested-With");
-
 function insertValue($n){
   if($_GET['mode']=='test'){
     if($n=='name') $code='Кирилл';
@@ -45,8 +39,7 @@ function insertValue($n){
   <!--matchHeight-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
   <!--dev tools-->
-  <?//if($_SERVER['SERVER_NAME']=='localhost') echo'<script src="'.$dir.'tools/moreDev.js"></script>';?>
-  
+  <?if($_SERVER['SERVER_NAME']=='localhost') echo'<script src="'.$dir.'tools/moreDev.js"></script>';?>
 </head>
 <body>
   <section id="header">
@@ -138,15 +131,6 @@ function insertValue($n){
       </div>
     </div>
   </section>
-<!--   <section id="copyright">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 text-right">
-          <a href="//kirillmore.ru"><img src="https://kirillmore.ru/img/common/logo.svg" alt="logo" class="logo"></a>
-        </div>
-      </div>
-    </div>
-  </section> -->
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
