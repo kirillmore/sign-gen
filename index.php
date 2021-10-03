@@ -106,15 +106,15 @@ function insertValue($n){
             <label>Должность:</label>
             <input type="text" name="position" placeholder="Должность" required <?=insertValue('position');?>>
             <label>Отдел:</label>
-            <input type="text" name="otdel" placeholder="Отдел" <?=insertValue('otdel');?>>
+            <input type="text" name="otdel" placeholder="Отдел" value="Отдел ">
             <label>Тел:</label>
             <input type="text" name="tel" placeholder="Телефон" required <?=insertValue('tel');?>>
+            <label>Доб.:</label>
+            <input type="text" name="teladd" placeholder="доб." <?=insertValue('dob');?>>
             <label>Моб:</label>
             <input type="text" name="mob" placeholder="Тел.моб." <?=insertValue('mob');?>>
             <label>E-mail:</label>
             <input type="text" name="email" placeholder="E-mail" required <?=insertValue('email');?>>
-            <label>Доб.:</label>
-            <input type="text" name="teladd" placeholder="доб." <?=insertValue('dob');?>>
             <input type="hidden" name="template">
             <button class="btn btn-success">Готово</button>
           </form>

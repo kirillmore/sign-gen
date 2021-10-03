@@ -12,22 +12,23 @@ body {
   height: auto;
   max-width: 100px;
 }
-#brand .active {
-  background-color: #f1f1f1;
-}
 #dc .dc__items {
   margin-bottom: 20px;
 }
 #dc .dc__items__btn {
   font-size: 20px;
   margin: 10px 0;
+  padding: 15px 0;
 }
 #dc .dc__items__btn span {
   border-bottom: 1px dashed gray;
 }
+.active {
+  background-color: #f1f1f1;
+}
 .header {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 20px;
 }
 #result {
