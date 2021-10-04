@@ -56,13 +56,13 @@ $(document).ready(function()
 
 function getTemplate(tmpname){
   if(tmpname=='lexus_primorsky'){
-    template='<table><tr><td>С уважением,<br>{имя} {фамилия}<br>{должность}<br><br>Лексус - Приморский<br>197374 | Российская Федерация <br>СПБ, ул. Школьная, 98 А<br>Тел: {tel}, {доб.}<br>Моб.: {mob}<br><a href="mailto:{email}">{email}</a> | <a href="//lexuscenter.ru">www.lexuscenter.ru</a> | <a href="//iat.ru">www.iat.ru</a></td></tr><tr><td><img src="'+url+'logo_lexus_prim.png" alt="lexus" style="margin-top:30px;"></td></tr></table>';
+    template='<table><tr><td>С уважением,<br>{имя} {фамилия}<br>{должность}<br><br>Лексус - Приморский<br>197374 | Российская Федерация <br>СПБ, ул. Школьная, 98 А<br>Тел: {tel}, {доб.} | Моб.: {mob}<br><a href="mailto:{email}">{email}</a> | <a href="//lexuscenter.ru">www.lexuscenter.ru</a> | <a href="//iat.ru">www.iat.ru</a></td></tr><tr><td><img src="'+url+'logo_lexus_prim.png" alt="lexus" style="margin-top:30px;"></td></tr></table>';
   }
   if(tmpname=='lexus_parnas'){
-    template='<table><tr><td>С уважением,<br>{имя} {фамилия}<br>{должность}<br><br>Лексус - Парнас<br>188660 | Российская Федерация<br>ЛО, Бугровское с.п., д. Порошкино, ул. Торговая, 22<br>Тел: {tel}, {доб.}<br>Моб.: {mob}<br><a href="mailto:{email}">{email}</a> | <a href="//lexuscenter.ru">www.lexuscenter.ru</a> | <a href="//iat.ru">www.iat.ru</a></td></tr><tr><td><img src="'+url+'logo_lexus_parnas.png" alt="lexus" style="margin-top:30px;"></td></tr></table>';
+    template='<table><tr><td>С уважением,<br>{имя} {фамилия}<br>{должность}<br><br>Лексус - Парнас<br>188660 | Российская Федерация<br>ЛО, Бугровское с.п., д. Порошкино, ул. Торговая, 22<br>Тел: {tel}, {доб.} | Моб.: {mob}<br><a href="mailto:{email}">{email}</a> | <a href="//lexuscenter.ru">www.lexuscenter.ru</a> | <a href="//iat.ru">www.iat.ru</a></td></tr><tr><td><img src="'+url+'logo_lexus_parnas.png" alt="lexus" style="margin-top:30px;"></td></tr></table>';
   }
   if(tmpname=='lexus_all'){
-    template='<table><tr><td>С уважением,<br>{имя} {фамилия}<br>{должность}<br><br>Лексус - Парнас<br>Лексус - Приморский<br>188660 | Российская Федерация<br>ЛО, Бугровское с.п., д. Порошкино, ул. Торговая, 22<br>Тел: {tel}, {доб.}<br>Моб.: {mob}<br><a href="mailto:{email}">{email}</a> | <a href="//lexuscenter.ru">www.lexuscenter.ru</a> | <a href="//iat.ru">www.iat.ru</a></td></tr><tr><td><img src="'+url+'logo_lexus.png" alt="lexus" style="margin-top:30px;"></td></tr></table>';
+    template='<table><tr><td>С уважением,<br>{имя} {фамилия}<br>{должность}<br><br>Лексус - Парнас<br>Лексус - Приморский<br>188660 | Российская Федерация<br>ЛО, Бугровское с.п., д. Порошкино, ул. Торговая, 22<br>Тел: {tel}, {доб.} | Моб.: {mob}<br><a href="mailto:{email}">{email}</a> | <a href="//lexuscenter.ru">www.lexuscenter.ru</a> | <a href="//iat.ru">www.iat.ru</a></td></tr><tr><td><img src="'+url+'logo_lexus.png" alt="lexus" style="margin-top:30px;"></td></tr></table>';
   }
   if(tmpname=='toyota_all'){
     template='<table><tr><td>С уважением,<br>{имя} {фамилия}<br><br>{должность}<br>АО "Интер Авто Тим"<br>Тел.: {tel}, {доб.}<br>Моб.: {mob}<br>Схема проезда доступна по ссылке:<br><a href="http://iat24.ru/link/63b6">http://iat24.ru/link/</a></td></tr><tr><td><img src="'+url+'logo_iat.png" alt="iat" style="margin-top:15px;"></td></tr><tr><td style="padding-top: 15px;"><a href="//iat.ru">www.iat.ru</a> | <a href="//toyotacenter.ru">www.toyotacenter.ru</a> | <a href="//lexuscenter.ru">www.lexuscenter.ru</a></td></tr><tr><td style="padding-top: 15px;">CКАЧАЙТЕ МОБИЛЬНОЕ ПРИЛОЖЕНИЕ<br><span style="color:#0088cc;">IAT CARS & SERVICE</span></td></tr><tr><td style="padding-top: 15px;"><a href="https://apps.apple.com/ru/app/iat-cars-service/id1538134096"><img src="'+url+'logo_apple.png" alt="apple" style="margin-right:10px;"></a><a href="https://play.google.com/store/apps/details?id=com.itsites.iat"><img src="'+url+'logo_google.png" alt="google"></a></td></tr></table>';
@@ -100,6 +100,7 @@ function getTemplate(tmpname){
     template=template.replace('{mob}',$("[name='mob']").val());
   }
   else{
+    template=template.replace('| Моб.: {mob}','');
     template=template.replace('Моб.: {mob}<br>','');
     template=template.replace('М {mob}<br>','');
   }
