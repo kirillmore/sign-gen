@@ -27,8 +27,8 @@ function insertValue($n){
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
   <!--less-->
-  <link rel="stylesheet" type="text/css" href="style.css?v=<?=file_get_contents('version.txt',true);?>" />
-  <link rel="stylesheet" type="text/css" href="<?=$dir?>bootstraphelper.css?v=<?=file_get_contents('version.txt',true);?>" />
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=<?=file_get_contents('version.txt',true);?>" />
+  <link rel="stylesheet" type="text/css" href="css/bootstraphelper.css?v=<?=file_get_contents('version.txt',true);?>" />
   <!--fontawesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--fancybox-->
@@ -131,6 +131,6 @@ function insertValue($n){
       </div>
     </div>
   </section>
-  <script type="text/javascript" src="script.js?v=<?=file_get_contents('version.txt',true);?>"></script>
+  <script type="text/javascript" src="js/script.js?v=<?=file_get_contents('version.txt',true);?>"></script>
 </body>
 </html>
