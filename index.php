@@ -103,10 +103,8 @@ function insertValue($n){
             <input type="text" name="name" placeholder="Имя" required <?=insertValue('name');?>>
             <label>Фамилия:</label>
             <input type="text" name="family" placeholder="Фамилия" required <?=insertValue('family');?>>
-            <label>Должность:</label>
+            <label>Должность + отдел</label>
             <input type="text" name="position" placeholder="Должность" required <?=insertValue('position');?>>
-            <label>Отдел:</label>
-            <input type="text" name="otdel" placeholder="Отдел" value="Отдел ">
             <label>Тел:</label>
             <input type="text" name="tel" placeholder="Телефон" required <?=insertValue('tel');?>>
             <label>Доб.:</label>
