@@ -76,7 +76,6 @@ function insertValue($n){
         </div>
         <div class="col-xs-12 dc__items hidden" id="dc_toyota">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_all"><span>Общая подпись</span></div>
           <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_primorsky"><span>Приморский</span></div>
           <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_parnas"><span>Парнас</span></div>
           <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_volhonsky"><span>Волхонский</span></div>
@@ -88,6 +87,10 @@ function insertValue($n){
         <div class="col-xs-12 dc__items hidden" id="dc_hyundai">
           <div class="header">2. Выберите ДЦ:</div>
           <div class="col-xs-12 text-center dc__items__btn" data-dc="hyundai_parnas"><span>Парнас</span></div>
+        </div>
+        <div class="col-xs-12 dc__items hidden" id="dc_iat">
+          <div class="header">2. Выберите ДЦ:</div>
+          <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_all"><span>Общая подпись</span></div>
         </div>
       </div>
     </div>

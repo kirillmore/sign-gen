@@ -23,6 +23,9 @@ $(document).ready(function()
     if($(this).attr("data-brand")=='hyundai'){
       $("#dc_hyundai").removeClass("hidden", {duration:2000});
     }
+    if($(this).attr("data-brand")=='iat'){
+      $("#dc_iat").removeClass("hidden", {duration:2000});
+    }
   });
 
 //step2

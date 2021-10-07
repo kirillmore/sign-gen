@@ -67,6 +67,7 @@ body {
 .d-flex .col-xs-12 {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .d-flex .col-xs-12 .smtext {
   font-size: 10px;
