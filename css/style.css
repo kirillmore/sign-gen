@@ -64,3 +64,10 @@ body {
   height: 12px;
   margin: 20px 5px;
 }
+.d-flex .col-xs-12 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.d-flex .col-xs-12 .smtext {
+  font-size: 10px;
+}

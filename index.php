@@ -53,14 +53,15 @@ function insertValue($n){
   </section>
   <section id="brand">
     <div class="container">
-      <div class="row">
+      <div class="row d-flex justify-content-center">
         <div class="col-xs-12 header">
           1. Выберите бренд:
         </div>
-        <div class="col-xs-12 col-sm-3 text-center"><img src="img/logo_toyota.svg" class="brand__logo" data-brand="toyota"></div>
-        <div class="col-xs-12 col-sm-3 text-center"><img src="img/logo_lexus.svg" class="brand__logo" data-brand="lexus"></div>
-        <div class="col-xs-12 col-sm-3 text-center"><img src="img/logo_chery.png" class="brand__logo" data-brand="chery"></div>
-        <div class="col-xs-12 col-sm-3 text-center"><img src="img/logo_hyundai.svg" class="brand__logo" data-brand="hyundai"></div>
+        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_toyota.svg" class="brand__logo" data-brand="toyota"></div>
+        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_lexus.svg" class="brand__logo" data-brand="lexus"></div>
+        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_chery.png" class="brand__logo" data-brand="chery"></div>
+        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_hyundai.svg" class="brand__logo" data-brand="hyundai"></div>
+        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_black.svg" class="brand__logo" data-brand="iat"><br><span class="smtext">(для руководителей общих подразделений холдинга)</span></div>
       </div>
     </div>
   </section>
