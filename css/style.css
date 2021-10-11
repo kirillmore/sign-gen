@@ -12,6 +12,14 @@ body {
   height: auto;
   max-width: 100px;
 }
+#brand .d-flex .col-xs-12 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#brand .d-flex .col-xs-12 .smtext {
+  font-size: 10px;
+}
 #dc .dc__items {
   margin-bottom: 20px;
 }
@@ -63,12 +71,4 @@ body {
 #copyright .logo {
   height: 12px;
   margin: 20px 5px;
-}
-.d-flex .col-xs-12 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.d-flex .col-xs-12 .smtext {
-  font-size: 10px;
 }

@@ -133,6 +133,6 @@ function insertValue($n){
       </div>
     </div>
   </section>
-  <script type="text/javascript" src="js/script.js?v=<?=file_get_contents('version.txt',true);?>"></script>
+  <script type="text/javascript" src="js/app.js?v=<?=file_get_contents('version.txt',true);?>"></script>
 </body>
 </html>
