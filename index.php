@@ -16,7 +16,7 @@ function insertValue($n){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title><?=$config['title'];?></title>
+  <title>IAT - генератор подписи</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <!--jquery-->
@@ -107,6 +107,8 @@ function insertValue($n){
             <input type="text" name="name" placeholder="Имя" required <?=insertValue('name');?>>
             <label>Фамилия:</label>
             <input type="text" name="family" placeholder="Фамилия" required <?=insertValue('family');?>>
+            <label class="hyundai_only">Отдел:</label>
+            <input class="hyundai_only" type="text" name="otdel" placeholder="Отдел" value="Отдел " <?=insertValue('otdel');?>>
             <label>Должность + отдел</label>
             <input type="text" name="position" placeholder="Должность" required <?=insertValue('position');?>>
             <label>Тел:</label>

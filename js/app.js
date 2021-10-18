@@ -21,12 +21,13 @@ $(document).ready(function()
     template_toyota_parnas='<table><tr><td>С уважением,<br>{имя} {фамилия}<br><br>{должность}<br>Тойота Центр Парнас<br>Тел.: {tel}, {доб.}<br>Моб.: {mob}<br>Схема проезда доступна по ссылке:<br><a href="http://iat24.ru/link/63b6">http://iat24.ru/link/</a></td></tr><tr><td><img src="'+url+'logo_iat.png" alt="iat" style="margin-top:15px;"></td></tr><tr><td style="padding-top: 15px;"><a href="//iat.ru">www.iat.ru</a> | <a href="//toyotacenter.ru">www.toyotacenter.ru</a> | <a href="//lexuscenter.ru">www.lexuscenter.ru</a></td></tr><tr><td style="padding-top: 15px;">CКАЧАЙТЕ МОБИЛЬНОЕ ПРИЛОЖЕНИЕ<br><span style="color:#0088cc;">IAT CARS & SERVICE</span></td></tr><tr><td style="padding-top: 15px;"><a href="https://apps.apple.com/ru/app/iat-cars-service/id1538134096"><img src="'+url+'logo_apple.png" style="margin-right:10px;" alt="apple"></a><a href="https://play.google.com/store/apps/details?id=com.itsites.iat"><img src="'+url+'logo_google.png" alt="google"></a></td></tr></table>';
     template_toyota_volhonsky='<table><tr><td>С уважением,<br>{имя} {фамилия}<br><br>{должность}<br>Тойота Центр Волхонский<br>Тел.: {tel}, {доб.}<br>Моб.: {mob}<br>Схема проезда доступна по ссылке:<br><a href="http://iat24.ru/link/a4d5">http://iat24.ru/link/</a></td></tr><tr><td><img src="'+url+'logo_iat.png" alt="iat" style="margin-top:15px;"></td></tr><tr><td style="padding-top: 15px;"><a href="//iat.ru">www.iat.ru</a> | <a href="//toyotacenter.ru">www.toyotacenter.ru</a> | <a href="//lexuscenter.ru">www.lexuscenter.ru</a></td></tr><tr><td style="padding-top: 15px;">CКАЧАЙТЕ МОБИЛЬНОЕ ПРИЛОЖЕНИЕ<br><span style="color:#0088cc;">IAT CARS & SERVICE</span></td></tr><tr><td style="padding-top: 15px;"><a href="https://apps.apple.com/ru/app/iat-cars-service/id1538134096"><img src="'+url+'logo_apple.png" style="margin-right:10px;" alt="apple"></a><a href="https://play.google.com/store/apps/details?id=com.itsites.iat"><img src="'+url+'logo_google.png" alt="google"></a></td></tr></table>';
     template_chery_volhonsky='<table><tr><td>С уважением,<br>{имя} {фамилия}<br><br>{должность}<br>Chery | Exeed Волхонский<br>Тел.: {tel}, {доб.}<br>Моб.: {mob}<br>Схема проезда доступна по ссылке:<br><a href="http://iat24.ru/link/c0cd">http://iat24.ru/link/</a></td></tr><tr><td><img src="'+url+'logo_iat.png" alt="iat" style="margin-top:15px;"></td></tr><tr><td style="padding-top: 15px;"><a href="//iat.ru">www.iat.ru</a> | <a href="//toyotacenter.ru">www.toyotacenter.ru</a> | <a href="//lexuscenter.ru">www.lexuscenter.ru</a></td></tr><tr><td style="padding-top: 15px;">CКАЧАЙТЕ МОБИЛЬНОЕ ПРИЛОЖЕНИЕ<br><span style="color:#0088cc;">IAT CARS & SERVICE</span></td></tr><tr><td style="padding-top: 15px;"><a href="https://apps.apple.com/ru/app/iat-cars-service/id1538134096"><img src="'+url+'logo_apple.png" style="margin-right:10px;" alt="apple"></a><a href="https://play.google.com/store/apps/details?id=com.itsites.iat"><img src="'+url+'logo_google.png" alt="google"></a></td></tr></table>';
-    template_hyundai_parnas='<table><tr><td><img src="'+url+'logo_hyundai.png" style="width:207px;height:34px;margin-top:34px;margin-bottom:34px;"></td></tr><tr><td>{фамилия} {имя}<br>{должность}<br>T {tel}, {доб.}<br>М {mob}<br><a href="mailto:{email}">{email}</a>&nbsp;&nbsp;<a href="//hyundai-parnas.ru">www.hyundai-parnas.ru</a><br><br>ИАТ Парнас<br>Официальный дилер Hyundai</td></tr><tr><td><img src="'+url+'banner_creta.png" style="margin-top:20px;"></td></tr></table>';
+    template_hyundai_parnas='<table style="font-size:10px;"><tr><td><img src="'+url+'logo_hyundai.png" style="width:207px;height:34px;margin-top:34px;margin-bottom:34px;"></td></tr><tr><td><b>{фамилия} {имя}</b><br><b>{отдел}</b><br><b>{должность}</b><br>T {tel}, {доб.}<br>М {mob}<br><a href="mailto:{email}">{email}</a>&nbsp;&nbsp;<a href="//hyundai-parnas.ru">www.hyundai-parnas.ru</a><br><br><b>ИАТ Парнас</b><br><b>Официальный дилер Hyundai</b></td></tr><tr><td><a href="https://hyundai-parnas.ru/NewCreta"><img src="'+url+'banner_creta.png" style="margin-top:20px;"></a></td></tr></table>';
 
 //step1
   $(".brand__logo").on('click', function(event){
     //hide all dc__items
     $(".dc__items").each(function(){$(this).addClass("hidden");});
+    $(".hyundai_only").each(function(){$(this).addClass("hidden");});
     $(".brand__logo").each(function(){$(this).parent().removeClass("active");});
     $("#result").addClass("hidden");
     $("#sandbox").html("");
@@ -66,7 +67,10 @@ $(document).ready(function()
     if($(this).attr("data-dc")=='toyota_parnas')    {$("[name='tel']").val(tel_toyota_parnas);}
     if($(this).attr("data-dc")=='toyota_volhonsky') {$("[name='tel']").val(tel_toyota_volhonsky);}
     if($(this).attr("data-dc")=='chery_volhonsky')  {$("[name='tel']").val(tel_chery_volhonsky);}
-    if($(this).attr("data-dc")=='hyundai_parnas')   {$("[name='tel']").val(tel_hyundai_parnas);}
+    if($(this).attr("data-dc")=='hyundai_parnas')   {
+      $("[name='tel']").val(tel_hyundai_parnas);
+      $(".hyundai_only").each(function(){$(this).removeClass("hidden");});
+    }
   });    
 
   //form submit
@@ -74,7 +78,6 @@ $(document).ready(function()
     template=getTemplate($("[name='template']").val());
     $("#sandbox").html(template);
     $("[name='code']").val(template);
-
     return false;
   });
 
@@ -133,7 +136,7 @@ function getTemplate(tmpname){
     template=template.replace('{отдел}',$("[name='otdel']").val());
   }
   else{
-    template=template.replace('{отдел}<br>','');
+    template=template.replace('<b>{отдел}</b><br>','');
   }
 
   if($("[name='teladd']").val()!==''){
