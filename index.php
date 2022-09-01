@@ -61,6 +61,7 @@ function insertValue($n){
         <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_lexus.svg" class="brand__logo" data-brand="lexus"></div>
         <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_chery.png" class="brand__logo" data-brand="chery"></div>
         <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_hyundai.svg" class="brand__logo" data-brand="hyundai"></div>
+        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_geely.png" class="brand__logo mt-5" data-brand="geely"></div>
         <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_black.svg" class="brand__logo" data-brand="iat"><br><span class="smtext">(для руководителей общих подразделений холдинга)</span></div>
       </div>
     </div>
@@ -91,6 +92,10 @@ function insertValue($n){
         <div class="col-xs-12 dc__items hidden" id="dc_iat">
           <div class="header">2. Выберите ДЦ:</div>
           <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_all"><span>Общая подпись</span></div>
+        </div>
+        <div class="col-xs-12 dc__items hidden" id="dc_geely">
+          <div class="header">2. Выберите ДЦ:</div>
+          <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="geely"><span>ооо «Иат Нео»</span></div>
         </div>
       </div>
     </div>
