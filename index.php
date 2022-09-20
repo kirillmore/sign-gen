@@ -1,9 +1,11 @@
 <?
 function insertValue($n){
   if($_GET['mode']=='test'){
-    if($n=='name') $code='Кирилл';
-    if($n=='family') $code='Моряков';
-    if($n=='position') $code='Разработчик';
+    if($n=='name') $code='Олег';
+    if($n=='family') $code='Борисов';
+    if($n=='name_eng') $code='Oleg Borisov';
+    if($n=='position') $code='Директор по послепродажному обслуживанию';
+    if($n=='position_eng') $code='After Sales Director';
     if($n=='otdel') $code='Отдел разработки';
     if($n=='tel') $code='+7 (921) 371-10-92';
     if($n=='mob') $code='+7 (921) 371-10-92';
@@ -38,8 +40,6 @@ function insertValue($n){
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--matchHeight-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
-  <!--dev tools-->
-  <?if($_SERVER['SERVER_NAME']=='localhost') echo'<script src="'.$dir.'tools/moreDev.js"></script>';?>
 </head>
 <body>
   <section id="header">
@@ -62,6 +62,7 @@ function insertValue($n){
         <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_chery.png" class="brand__logo" data-brand="chery"></div>
         <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_hyundai.svg" class="brand__logo" data-brand="hyundai"></div>
         <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_geely.png" class="brand__logo mt-5" data-brand="geely"></div>
+        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_exeed.png" class="brand__logo mt-5" data-brand="exeed"></div>
         <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_black.svg" class="brand__logo" data-brand="iat"><br><span class="smtext">(для руководителей общих подразделений холдинга)</span></div>
       </div>
     </div>
@@ -95,7 +96,11 @@ function insertValue($n){
         </div>
         <div class="col-xs-12 dc__items hidden" id="dc_geely">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="geely"><span>ооо «Иат Нео»</span></div>
+          <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="geely"><span>ООО «Иат Нео»</span></div>
+        </div>
+        <div class="col-xs-12 dc__items hidden" id="dc_exeed">
+          <div class="header">2. Выберите ДЦ:</div>
+          <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="exeed"><span>EXEED Волхонский</span></div>
         </div>
       </div>
     </div>
@@ -112,10 +117,14 @@ function insertValue($n){
             <input type="text" name="name" placeholder="Имя" required <?=insertValue('name');?>>
             <label>Фамилия:</label>
             <input type="text" name="family" placeholder="Фамилия" required <?=insertValue('family');?>>
+            <label class="exeed_only">Name + Family (eng.):*</label>
+            <input class="exeed_only" type="text" name="name_eng" placeholder="Name Family" <?=insertValue('name_eng');?>>
             <label class="hyundai_only">Отдел:</label>
             <input class="hyundai_only" type="text" name="otdel" placeholder="Отдел" value="Отдел " <?=insertValue('otdel');?>>
             <label>Должность + отдел</label>
             <input type="text" name="position" placeholder="Должность" required <?=insertValue('position');?>>
+            <label class="exeed_only">Position + department (eng.):*</label>
+            <input class="exeed_only" type="text" name="position_eng" placeholder="Position + department" <?=insertValue('position_eng');?>>
             <label>Тел:</label>
             <input type="text" name="tel" placeholder="Телефон" required <?=insertValue('tel');?>>
             <label>Доб.:</label>
@@ -141,5 +150,7 @@ function insertValue($n){
     </div>
   </section>
   <script type="text/javascript" src="js/app.js?v=<?=file_get_contents('version.txt',true);?>"></script>
+  <!--dev tools-->
+  <?if($_SERVER['SERVER_NAME']=='localhost') echo'<script src="../_devtools/moreDev.js?path='.$current_page=str_replace("/","",strtolower(parse_url("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]",PHP_URL_PATH))).'"></script>';?>
 </body>
 </html>
