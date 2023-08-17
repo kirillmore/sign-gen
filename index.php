@@ -24,9 +24,9 @@ function insertValue($n){
   <!--jquery-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <!--fonts-->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
   <!--less-->
   <link rel="stylesheet" type="text/css" href="css/style.css?v=<?=file_get_contents('version.txt',true);?>" />
@@ -53,69 +53,69 @@ function insertValue($n){
   <section id="brand">
     <div class="container">
       <div class="row d-flex justify-content-center">
-        <div class="col-xs-12 header">
-          1. Выберите бренд:
-        </div>
-        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_toyota.svg" class="brand__logo" data-brand="toyota"></div>
-        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_lexus.svg" class="brand__logo" data-brand="lexus"></div>
-        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_chery.png" class="brand__logo" data-brand="chery"></div>
-        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_hyundai.svg" class="brand__logo" data-brand="hyundai"></div>
-        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_geely.png" class="brand__logo mt-5" data-brand="geely"></div>
-        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_exeed.png" class="brand__logo mt-5" data-brand="exeed"></div>
-        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_omoda.png" class="brand__logo mt-5" data-brand="omoda"></div>
-        <div class="col-xs-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_black.svg" class="brand__logo" data-brand="iat"><br><span class="smtext">(для руководителей общих подразделений холдинга)</span></div>
+        <div class="col-12 header">1. Выберите бренд:</div>
+        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_toyota.svg" class="brand__logo" data-brand="toyota"></div>
+        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_lexus.svg" class="brand__logo" data-brand="lexus"></div>
+        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_chery.png" class="brand__logo" data-brand="chery"></div>
+        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_hyundai.svg" class="brand__logo" data-brand="hyundai"></div>
+        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_geely.png" class="brand__logo mt-5" data-brand="geely"></div>
+        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_exeed.png" class="brand__logo mt-5" data-brand="exeed"></div>
+        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_omoda.png" class="brand__logo mt-5" data-brand="omoda"></div>
+        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_black.svg" class="brand__logo" data-brand="iat"><br><span class="smtext">(для руководителей общих подразделений холдинга)</span></div>
       </div>
     </div>
   </section>
   <section id="dc">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 dc__items hidden" id="dc_lexus">
+        <div class="col-12 dc__items d-none" id="dc_lexus">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-xs-12 col-sm-4 text-center dc__items__btn" data-dc="lexus_primorsky"><span>Приморский</span></div>
-          <div class="col-xs-12 col-sm-4 text-center dc__items__btn" data-dc="lexus_parnas"><span>Парнас</span></div>
-          <div class="col-xs-12 col-sm-4 text-center dc__items__btn" data-dc="lexus_all"><span>Приморский+Парнас</span></div>
+          <div class="row">
+            <div class="col-12 col-sm-4 text-center dc__items__btn" data-dc="lexus_primorsky"><span>Приморский</span></div>
+            <div class="col-12 col-sm-4 text-center dc__items__btn" data-dc="lexus_parnas"><span>Парнас</span></div>
+            <div class="col-12 col-sm-4 text-center dc__items__btn" data-dc="lexus_all"><span>Приморский+Парнас</span></div>
+          </div>
         </div>
-        <div class="col-xs-12 dc__items hidden" id="dc_toyota">
+        <div class="col-12 dc__items d-none" id="dc_toyota">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_primorsky"><span>Приморский</span></div>
-          <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_parnas"><span>Парнас</span></div>
-          <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_volhonsky"><span>Волхонский</span></div>
+          <div class="row">
+            <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_primorsky"><span>Приморский</span></div>
+            <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_parnas"><span>Парнас</span></div>
+            <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_volhonsky"><span>Волхонский</span></div>
+          </div>
         </div>
-        <div class="col-xs-12 dc__items hidden" id="dc_chery">
+        <div class="col-12 dc__items d-none" id="dc_chery">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-xs-12 text-center dc__items__btn" data-dc="chery_volhonsky"><span>Волхонский</span></div>
+          <div class="col-12 text-center dc__items__btn" data-dc="chery_volhonsky"><span>Волхонский</span></div>
         </div>
-        <div class="col-xs-12 dc__items hidden" id="dc_hyundai">
+        <div class="col-12 dc__items d-none" id="dc_hyundai">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-xs-12 text-center dc__items__btn" data-dc="hyundai_parnas"><span>Парнас</span></div>
+          <div class="col-12 text-center dc__items__btn" data-dc="hyundai_parnas"><span>Парнас</span></div>
         </div>
-        <div class="col-xs-12 dc__items hidden" id="dc_iat">
+        <div class="col-12 dc__items d-none" id="dc_iat">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_all"><span>Общая подпись</span></div>
+          <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_all"><span>Общая подпись</span></div>
         </div>
-        <div class="col-xs-12 dc__items hidden" id="dc_geely">
+        <div class="col-12 dc__items d-none" id="dc_geely">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="geely"><span>ООО «Иат Нео»</span></div>
+          <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="geely"><span>ООО «Иат Нео»</span></div>
         </div>
-        <div class="col-xs-12 dc__items hidden" id="dc_exeed">
+        <div class="col-12 dc__items d-none" id="dc_exeed">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="exeed"><span>EXEED Волхонский</span></div>
+          <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="exeed"><span>EXEED Волхонский</span></div>
         </div>
-        <div class="col-xs-12 dc__items hidden" id="dc_omoda">
+        <div class="col-12 dc__items d-none" id="dc_omoda">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-xs-12 col-sm-3 text-center dc__items__btn" data-dc="omoda"><span>OMODA ИАТ Приморский</span></div>
+          <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="omoda"><span>OMODA ИАТ Приморский</span></div>
         </div>
       </div>
     </div>
   </section>
-  <section id="result" class="hidden">
+  <section id="result" class="d-none">
     <div class="container">
       <div class="row mt">
-        <div class="col-xs-12 col-sm-6" id="form">
-          <div class="header">
-            3. Заполните форму:
-          </div>
+        <div class="col-12 col-sm-6" id="form">
+          <div class="header">3. Заполните форму:</div>
           <form name="form">
             <label>Имя:</label>
             <input type="text" name="name" placeholder="Имя" required <?=insertValue('name');?>>
@@ -141,7 +141,7 @@ function insertValue($n){
             <button class="btn btn-success">Готово</button>
           </form>
         </div>
-        <div class="col-xs-12 col-sm-6" id="result">
+        <div class="col-12 col-sm-6" id="result">
           <div class="header">Ваша подпись:</div>
           <div id="sandbox"></div>
           <div class="header">Код:</div>
