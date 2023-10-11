@@ -58,9 +58,10 @@ function insertValue($n){
         <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_lexus.svg" class="brand__logo" data-brand="lexus"></div>
         <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_chery.png" class="brand__logo" data-brand="chery"></div>
         <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_hyundai.svg" class="brand__logo" data-brand="hyundai"></div>
-        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_geely.png" class="brand__logo mt-5" data-brand="geely"></div>
+        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_geely.png" class="brand__logo" data-brand="geely"></div>
         <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_exeed.png" class="brand__logo mt-5" data-brand="exeed"></div>
         <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_omoda.png" class="brand__logo mt-5" data-brand="omoda"></div>
+        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_jaecoo.png" class="brand__logo mt-5" data-brand="jaecoo"></div>
         <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_black.svg" class="brand__logo" data-brand="iat"><br><span class="smtext">(для руководителей общих подразделений холдинга)</span></div>
       </div>
     </div>
@@ -107,6 +108,12 @@ function insertValue($n){
         <div class="col-12 dc__items d-none" id="dc_omoda">
           <div class="header">2. Выберите ДЦ:</div>
           <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="omoda"><span>OMODA ИАТ Приморский</span></div>
+        </div>
+        <div class="col-12 dc__items d-none" id="dc_jaecoo">
+          <div class="header">2. Выберите ДЦ:</div>
+            <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="jaecoo_parnas"><span>JAECOO Центр ИАТ Парнас</span></div>
+            <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="jaecoo_primorsky"><span>JAECOO ИАТ Приморский</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -156,6 +163,6 @@ function insertValue($n){
   </section>
   <script type="text/javascript" src="js/app.js?v=<?=file_get_contents('version.txt',true);?>"></script>
   <!--dev tools-->
-  <?if($_SERVER['SERVER_NAME']=='localhost') echo'<script src="../_devtools/moreDev.js?path='.$current_page=str_replace("/","",strtolower(parse_url("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]",PHP_URL_PATH))).'"></script>';?>
+  <?if($_SERVER['SERVER_NAME']=='localhost') echo'<script id="moredev" src="../_devtools/moreDev.js?path='.$current_page=str_replace("/","",strtolower(parse_url("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]",PHP_URL_PATH))).'"></script>';?>
 </body>
 </html>
