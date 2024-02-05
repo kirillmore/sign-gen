@@ -42,7 +42,7 @@ function insertValue($n){
 </head>
 <body>
   <section id="header">
-    <div class="container">
+    <div class="container-xl">
       <div class="row">
         <div class="col-xs-6">
           <img src="img/logo.svg" alt="">
@@ -51,23 +51,24 @@ function insertValue($n){
     </div>
   </section>
   <section id="brand">
-    <div class="container">
+    <div class="container-xl">
       <div class="row d-flex justify-content-center">
         <div class="col-12 header">1. Выберите бренд:</div>
-        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_toyota.svg" class="brand__logo" data-brand="toyota"></div>
-        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_lexus.svg" class="brand__logo" data-brand="lexus"></div>
-        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_chery.png" class="brand__logo" data-brand="chery"></div>
-        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_hyundai.svg" class="brand__logo" data-brand="hyundai"></div>
-        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_geely.png" class="brand__logo" data-brand="geely"></div>
-        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_exeed.png" class="brand__logo mt-5" data-brand="exeed"></div>
-        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_omoda.png" class="brand__logo mt-5" data-brand="omoda"></div>
-        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_jaecoo.png" class="brand__logo mt-5" data-brand="jaecoo"></div>
-        <div class="col-12 col-sm-2 text-center" data-mh="logo"><img src="img/logo_black.svg" class="brand__logo" data-brand="iat"><br><span class="smtext">(для руководителей общих подразделений холдинга)</span></div>
+        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_toyota.svg" class="brand__logo" data-brand="toyota"></div>
+        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_lexus.svg" class="brand__logo" data-brand="lexus"></div>
+        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_chery.png" class="brand__logo" data-brand="chery"></div>
+        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_hyundai.svg" class="brand__logo" data-brand="hyundai"></div>
+        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_geely.png" class="brand__logo" data-brand="geely"></div>
+        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_exeed.png" class="brand__logo" data-brand="exeed"></div>
+        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_omoda.png" class="brand__logo" data-brand="omoda"></div>
+        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_jaecoo.png" class="brand__logo" data-brand="jaecoo"></div>
+        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_jac.png" class="brand__logo" data-brand="jac"></div>
+        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_black.svg" class="brand__logo" data-brand="iat"><!--<br><span class="smtext">(для руководителей общих подразделений холдинга)</span>--></div>
       </div>
     </div>
   </section>
   <section id="dc">
-    <div class="container">
+    <div class="container-xl">
       <div class="row">
         <div class="col-12 dc__items d-none" id="dc_lexus">
           <div class="header">2. Выберите ДЦ:</div>
@@ -115,11 +116,16 @@ function insertValue($n){
             <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="jaecoo_primorsky"><span>JAECOO ИАТ Приморский</span></div>
           </div>
         </div>
+        <div class="col-12 dc__items d-none" id="dc_jac">
+          <div class="header">2. Выберите ДЦ:</div>
+            <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="jac_volhonsky"><span>GAC Центр Волхонский</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <section id="result" class="d-none">
-    <div class="container">
+    <div class="container-xl">
       <div class="row mt">
         <div class="col-12 col-sm-6" id="form">
           <div class="header">3. Заполните форму:</div>
