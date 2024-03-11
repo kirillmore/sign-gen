@@ -44,7 +44,7 @@ function insertValue($n){
   <section id="header">
     <div class="container-xl">
       <div class="row">
-        <div class="col-xs-6">
+        <div class="col-6">
           <img src="img/logo.svg" alt="">
         </div>
       </div>
@@ -56,7 +56,7 @@ function insertValue($n){
         <div class="col-12 header">1. Выберите бренд:</div>
         <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_toyota.svg" class="brand__logo" data-brand="toyota"></div>
         <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_lexus.svg" class="brand__logo" data-brand="lexus"></div>
-        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_chery.png" class="brand__logo" data-brand="chery"></div>
+        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_chery_2024.png" class="brand__logo" data-brand="chery"></div>
         <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_hyundai.svg" class="brand__logo" data-brand="hyundai"></div>
         <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_geely.png" class="brand__logo" data-brand="geely"></div>
         <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_exeed.png" class="brand__logo" data-brand="exeed"></div>
@@ -162,6 +162,7 @@ function insertValue($n){
             <textarea name="code"></textarea>
             <div id="copycode" class="btn btn-sm btn-success"><i class="fas fa-copy"></i> копировать</div>
             <div id="downloadcode" class="btn btn-sm btn-success"><i class="fas fa-copy"></i> сохранить</div>
+            <div class="mt-2 text-success text-sm d-none" id="copy_message">Скопировано в буфер обмена</div>
           </div>
         </div>
       </div>
