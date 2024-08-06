@@ -63,6 +63,7 @@ function insertValue($n){
         <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_omoda.png" class="brand__logo" data-brand="omoda"></div>
         <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_jaecoo.png" class="brand__logo" data-brand="jaecoo"></div>
         <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_jac.png" class="brand__logo" data-brand="jac"></div>
+        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_tank.png" class="brand__logo" data-brand="tank"></div>
         <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_black.svg" class="brand__logo" data-brand="iat"><!--<br><span class="smtext">(для руководителей общих подразделений холдинга)</span>--></div>
       </div>
     </div>
@@ -88,37 +89,57 @@ function insertValue($n){
         </div>
         <div class="col-12 dc__items d-none" id="dc_chery">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-12 text-center dc__items__btn" data-dc="chery_volhonsky"><span>Волхонский</span></div>
+          <div class="row">
+            <div class="col-12 text-center dc__items__btn" data-dc="chery_volhonsky"><span>Волхонский</span></div>
+          </div>
         </div>
         <div class="col-12 dc__items d-none" id="dc_hyundai">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-12 text-center dc__items__btn" data-dc="hyundai_parnas"><span>Парнас</span></div>
+          <div class="row">
+            <div class="col-12 text-center dc__items__btn" data-dc="hyundai_parnas"><span>Парнас</span></div>
+          </div>
         </div>
         <div class="col-12 dc__items d-none" id="dc_iat">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_all"><span>Общая подпись</span></div>
+          <div class="row">
+            <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="toyota_all"><span>Общая подпись</span></div>
+          </div>
         </div>
         <div class="col-12 dc__items d-none" id="dc_geely">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="geely"><span>ООО «Иат Нео»</span></div>
+          <div class="row">
+            <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="geely"><span>ООО «Иат Нео»</span></div>
+          </div>
         </div>
         <div class="col-12 dc__items d-none" id="dc_exeed">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="exeed"><span>EXEED Волхонский</span></div>
+          <div class="row">
+            <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="exeed"><span>EXEED Волхонский</span></div>
+          </div>
         </div>
         <div class="col-12 dc__items d-none" id="dc_omoda">
           <div class="header">2. Выберите ДЦ:</div>
-          <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="omoda"><span>OMODA ИАТ Приморский</span></div>
+          <div class="row">
+            <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="omoda"><span>OMODA ИАТ Приморский</span></div>
+          </div>
         </div>
         <div class="col-12 dc__items d-none" id="dc_jaecoo">
           <div class="header">2. Выберите ДЦ:</div>
+          <div class="row">
             <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="jaecoo_parnas"><span>JAECOO Центр ИАТ Парнас</span></div>
             <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="jaecoo_primorsky"><span>JAECOO ИАТ Приморский</span></div>
           </div>
         </div>
         <div class="col-12 dc__items d-none" id="dc_jac">
           <div class="header">2. Выберите ДЦ:</div>
+          <div class="row">
             <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="jac_volhonsky"><span>GAC Центр Волхонский</span></div>
+          </div>
+        </div>
+        <div class="col-12 dc__items d-none" id="dc_tank">
+          <div class="header">2. Выберите ДЦ:</div>
+          <div class="row">
+            <div class="col-12 col-sm-3 text-center dc__items__btn" data-dc="tank_parnas"><span>TANK ИАТ Парнас</span></div>
           </div>
         </div>
       </div>
