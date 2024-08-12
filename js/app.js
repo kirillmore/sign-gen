@@ -6,6 +6,10 @@ $(document).ready(function() {
   hyundaiURL = 'https://www.hyundai.ru/brand/carbon-neutrality';
   appURL = 'https://onelink.to/9rmsse';
 
+  if ($(".phone")[0]) {
+    $(".phone").mask("+7 (999) 999-99-99");
+  }
+
   //tel
   tel_lexus_primorsky = '+7 (812) 336-58-88';
   tel_lexus_parnas = '+7 (812) 448-78-88';
@@ -21,6 +25,7 @@ $(document).ready(function() {
   tel_omoda = '+7 (812) 337-08-80';
   tel_jaecoo_parnas = '+7 (812) 337-08-88';
   tel_jaecoo_primorsky = '+7 (812) 337-08-80';
+  tel_tank = '+7 (812) 337-78-87';
 
   //template
   template_lexus_primorsky = '<table style="font-family:Arial;"><tr><td>С уважением,<br>{имя} {фамилия}<br><br>{должность}<br>Группа Компаний "Интер Авто Тим"<br>Тел.: {tel}, {доб.}<br>Моб.: {mob}<br></td></tr><tr><td><img src="' + url + 'logo_iat.png" alt="iat" style="margin-top:15px;"></td></tr><tr><td style="padding-top: 15px;"><a href="//iat.ru">www.iat.ru</a></td></tr><tr><td style="padding-top: 15px;">CКАЧАЙТЕ МОБИЛЬНОЕ ПРИЛОЖЕНИЕ<br><span style="color:#0088cc;">IAT CARS & SERVICE</span></td></tr><tr><td style="padding-top: 15px;"><a href="' + appURL + '"><img src="' + url + 'logo_apple.png" alt="apple" style="margin-right:10px;"></a><a href="' + appURL + '"><img src="' + url + 'logo_google.png" alt="google"></a></td></tr></table>';
@@ -38,8 +43,7 @@ $(document).ready(function() {
   template_jaecoo_parnas = '<table><tbody><tr><td style="height: 32px; width: 309px; vertical-align: middle;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;"><strong>{имя} {фамилия}</strong></span></td><td style="height: 32px; width: 5px; vertical-align: middle;" rowspan="2"><img src="' + url + 'line.png" alt="line" width="1" height="120"></td><td style="width: 238px; text-align: center; vertical-align: middle;" rowspan="2"><img style="display: block; margin-bottom: 10px; margin-top: 10px;" src="' + url + 'logo_jaecoo.png" alt="JAECOO" width="230" height="27" hspace="5"></td></tr><tr><td style="height: 33px; width: 309px; vertical-align: middle;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">{должность}</span><br><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">JAECOO Центр ИАТ Парнас</span></td></tr></tbody></table><table><tbody><tr><td style="height: 18px; width: 564px;"><hr></td></tr><tr><td style="height: 28px; width: 600px; vertical-align: bottom;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">Адрес: 188660, Ленинградская Область, д. Порошкино, ул. Торговая, 22</span></td></tr><tr><td style="height: 18px; width: 564px;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">Tel.: {tel} ext. {доб.}</span></td></tr><tr><td style="height: 18px; width: 564px;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">Mobile: {mob}</span></td></tr><tr><td style="height: 24px; width: 564px; vertical-align: top;"><span style="font-size: 10pt; line-height: 13pt; font-family: Arial, sans-serif; color: #808080;">E-mail: <a href="mailto:{email}" style="text-decoration:underline;">{email}</a></span></td></tr></tbody></table>';
   template_jaecoo_primorsky = '<table><tbody><tr><td style="height: 32px; width: 309px; vertical-align: middle;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;"><strong>{имя} {фамилия}</strong></span></td><td style="height: 32px; width: 5px; vertical-align: middle;" rowspan="2"><img src="' + url + 'line.png" alt="line" width="1" height="120"></td><td style="width: 238px; text-align: center; vertical-align: middle;" rowspan="2"><img style="display: block; margin-bottom: 10px; margin-top: 10px;" src="' + url + 'logo_jaecoo.png" alt="JAECOO" width="230" height="27" hspace="5"></td></tr><tr><td style="height: 33px; width: 309px; vertical-align: middle;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">{должность}</span><br><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">JAECOO ИАТ Приморский</span></td></tr></tbody></table><table><tbody><tr><td style="height: 18px; width: 564px;"><hr></td></tr><tr><td style="height: 28px; width: 600px; vertical-align: bottom;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">Адрес: 197374, город Санкт-Петербург, улица Школьная, дом 98, литера А, помещение 71</span></td></tr><tr><td style="height: 18px; width: 564px;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">Tel.: {tel} ext. {доб.}</span></td></tr><tr><td style="height: 18px; width: 564px;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">Mobile: {mob}</span></td></tr><tr><td style="height: 24px; width: 564px; vertical-align: top;"><span style="font-size: 10pt; line-height: 13pt; font-family: Arial, sans-serif; color: #808080;">E-mail: <a href="mailto:{email}" style="text-decoration:underline;">{email}</a></span></td></tr></tbody></table>';
   template_jac_volhonsky = '<table><tbody><tr><td style="height: 32px; width: 309px; vertical-align: middle;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;"><strong>{имя} {фамилия}</strong></span></td><td style="height: 32px; width: 5px; vertical-align: middle;" rowspan="2"><img src="' + url + 'line.png" alt="line" width="1" height="120"></td><td style="width: 238px; text-align: center; vertical-align: middle;" rowspan="2"><img style="display: block; margin-bottom: 10px; margin-top: 10px;" src="' + url + 'logo_jac.png" alt="GAC" width="230" height="79" hspace="5"></td></tr><tr><td style="height: 33px; width: 309px; vertical-align: middle;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">{должность}</span><br><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">GAC Центр Волхонский</span></td></tr></tbody></table><table><tbody><tr><td style="height: 18px; width: 564px;"><hr></td></tr><tr><td style="height: 28px; width: 600px; vertical-align: bottom;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">Адрес: г. Санкт-Петербург, Ленинградская область, Ломоносовский район, Виллозское городское поселение, 3</span></td></tr><tr><td style="height: 18px; width: 564px;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">Tel.: {tel} ext. {доб.}</span></td></tr><tr><td style="height: 18px; width: 564px;"><span style="font-size: 10pt; line-height: 13pt; font-family: Calibri, sans-serif; color: #808080;">Mobile: {mob}</span></td></tr><tr><td style="height: 24px; width: 564px; vertical-align: top;"><span style="font-size: 10pt; line-height: 13pt; font-family: Arial, sans-serif; color: #808080;">E-mail: <a href="mailto:{email}" style="text-decoration:underline;">{email}</a></span></td></tr></tbody></table>';
-  template_tank = '<table style="width:100%;"><tr><td style="width: 40px; vertical-align: middle;"></td><td><img src="' + url + 'logo_tank_badge.png" style="width:60px;height:auto;margin-bottom: 20px;"></td></tr><tr><td style="width: 40px; vertical-align: middle;"></td><td><div style="font-size:13pt; color:#272d2d; line-height: 13pt; font-family: Arial, sans-serif;margin-bottom: 8px;"><strong>{имя} {фамилия}</strong></div><div style="font-size:11pt; color:#272d2d; line-height: 13pt; font-family: Arial, sans-serif;margin-bottom: 16px;">{должность}</div><div style="font-size:10pt; color: #b5b4b6; line-height: 13pt; font-family: Arial, sans-serif;margin-bottom: 3px;">TANK ИАТ Парнас</div><div style="font-size:10pt; color: #b5b4b6; line-height: 13pt; font-family: Arial, sans-serif;margin-bottom: 3px;">ТЕЛЕФОН｜+7 (812) 337-78-87</div><div style="font-size:10pt; color: #b5b4b6; line-height: 13pt; font-family: Arial, sans-serif;margin-bottom: 3px;">МОБ.｜{mob}</div><div style="font-size:10pt; color: #b5b4b6; line-height: 13pt; font-family: Arial, sans-serif;margin-bottom: 3px;">EMAIL | {email}</div><div style="font-size:10pt; color: #b5b4b6; line-height: 13pt; font-family: Arial, sans-serif;margin-bottom: 3px;">АДРЕС｜ЛО, д. Порошкино, ул. Торговая, д. 22</div><div style="font-size:10pt; color: #b5b4b6; line-height: 13pt; font-family: Arial, sans-serif;margin-bottom: 26px;">САЙТ｜<a href="https://iat-tank.ru" style="color: inherit;">iat-tank.ru</a></div></td></tr></table><table style="width:100%;"><tr><td width="30" style="width: 30px; vertical-align: middle;"><img src="' + url + 'tank-line.png" style="width:100%;height:22px;"></td><td width="146"><img src="' + url + 'logo_tank.png" style="margin: 0 10px;"></td><td width="*"><img src="' + url + 'tank-line.png" style="width:100%;height:22px;"></td></tr></table>';
-
+  template_tank = '<table role="presentation" cellpadding="0" cellspacing="0" style="width:600px;margin-top:15px;" width="600"><tr><td style="width:15px;vertical-align:middle;"></td><td><p><img src="' + url + 'logo_tank_badge.png" style="width:40px;height:auto;margin-bottom:20px;margin-top:15px;display:block;"></p><p style="font-size:13pt;color:#272d2d;line-height:13pt;font-family:Arial, sans-serif;margin-bottom:8px;text-transform:uppercase;"><strong>{имя} {фамилия}</strong></p><p style="font-size:11pt;color:#272d2d;line-height:13pt;font-family:Arial, sans-serif;margin-top:3px;margin-bottom:3px;">{должность}</p><p style="font-size:10pt;color:#272d2d;line-height:13pt;font-family:Arial, sans-serif;margin-top:3px;margin-bottom:16px;">TANK ИАТ Парнас</p><p style="font-size:10pt;color:#b5b4b6;line-height:13pt;font-family:Arial, sans-serif;margin-bottom:3px;">ТЕЛЕФОН｜{tel}, {доб.}</p><p style="font-size:10pt;color:#b5b4b6;line-height:13pt;font-family:Arial, sans-serif;margin-top:3px;margin-bottom:3px;">МОБ.｜{mob}</p><p style="font-size:10pt;color:#b5b4b6;line-height:13pt;font-family:Arial, sans-serif;margin-top:3px;margin-bottom:3px;">EMAIL | <a href="mailto:{email}" style="color:#b5b4b6;">{email}</a></p><p style="font-size:10pt;color:#b5b4b6;line-height:13pt;font-family:Arial, sans-serif;margin-top:3px;margin-bottom:3px;">АДРЕС｜ЛО, Порошкино, ул. Торговая, д. 22</p><p style="font-size:10pt;color:#b5b4b6;line-height:13pt;font-family:Arial, sans-serif;margin-top:3px;margin-bottom:26px;">САЙТ｜<a href="https://iat-tank.ru" style="color:#b5b4b6;">iat-tank.ru</a></p></td></tr></table><table role="presentation" cellpadding="0" cellspacing="0" style="width:600px;" width="600"><tr><td><img src="' + url + 'line_full.png" alt="line"></td></tr></table>';
 
   //step1
   $(".brand__logo").on('click', function(event) {
@@ -116,6 +120,7 @@ $(document).ready(function() {
     if ($(this).attr("data-dc") == 'omoda') { $("[name='tel']").val(tel_omoda); }
     if ($(this).attr("data-dc") == 'jaecoo_parnas') { $("[name='tel']").val(tel_jaecoo_parnas); }
     if ($(this).attr("data-dc") == 'jaecoo_primorsky') { $("[name='tel']").val(tel_jaecoo_primorsky); }
+    if ($(this).attr("data-dc") == 'tank_parnas') { $("[name='tel']").val(tel_tank); }
   });
 
   //form submit
@@ -163,19 +168,15 @@ $(document).ready(function() {
     if (tmpname == 'omoda') {
       template = template_omoda;
     }
-
     if (tmpname == 'jaecoo_parnas') {
       template = template_jaecoo_parnas;
     }
-
     if (tmpname == 'jaecoo_primorsky') {
       template = template_jaecoo_primorsky;
     }
-
     if (tmpname == 'jac_volhonsky') {
       template = template_jac_volhonsky;
     }
-
     if (tmpname == 'tank_parnas') {
       template = template_tank;
     }
@@ -199,6 +200,7 @@ $(document).ready(function() {
       template = template.replace('{mob}', $("[name='mob']").val());
     } else {
       template = template.replace('| Моб.: {mob}', '');
+      template = template.replace('МОБ.｜{mob}', '');
       template = template.replace('Моб.: {mob}<br>', '');
       template = template.replace('М {mob}<br>', '');
       template = template.replace('<tr><td style="height: 18px; width: 564px;"><span style="font-size: 10pt; line-height: 13pt; font-family: Arial, sans-serif; color: #808080;">Mobile: {mob}</span></td></tr>', '');

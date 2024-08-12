@@ -16,7 +16,7 @@ function insertValue($n){
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <title>IAT - генератор подписи</title>
   <meta charset="utf-8">
@@ -39,6 +39,8 @@ function insertValue($n){
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--matchHeight-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+  <!-- Maskedinput-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 </head>
 <body>
   <section id="header">
@@ -64,7 +66,7 @@ function insertValue($n){
         <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_jaecoo.png" class="brand__logo" data-brand="jaecoo"></div>
         <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_jac.png" class="brand__logo" data-brand="jac"></div>
         <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_tank.png" class="brand__logo" data-brand="tank"></div>
-        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_black.svg" class="brand__logo" data-brand="iat"><!--<br><span class="smtext">(для руководителей общих подразделений холдинга)</span>--></div>
+        <div class="col-12 col-sm-2 d-flex align-items-center justify-content-center" data-mh="logo"><img src="img/logo_black.svg" class="brand__logo" data-brand="iat"></div>
       </div>
     </div>
   </section>
@@ -164,11 +166,11 @@ function insertValue($n){
             <label class="exeed_only">Position + department (eng.):*</label>
             <input class="exeed_only" type="text" name="position_eng" placeholder="Position + department" <?=insertValue('position_eng');?>>
             <label>Тел:</label>
-            <input type="text" name="tel" placeholder="Телефон" required <?=insertValue('tel');?>>
+            <input type="text" name="tel" class="phone" placeholder="Телефон" required <?=insertValue('tel');?>>
             <label>Доб.:</label>
             <input type="text" name="teladd" placeholder="доб." <?=insertValue('dob');?>>
             <label>Моб:</label>
-            <input type="text" name="mob" placeholder="Тел.моб." <?=insertValue('mob');?>>
+            <input type="text" name="mob" class="phone" placeholder="Тел.моб." <?=insertValue('mob');?>>
             <label>E-mail:</label>
             <input type="text" name="email" placeholder="E-mail" required <?=insertValue('email');?>>
             <input type="hidden" name="template">
